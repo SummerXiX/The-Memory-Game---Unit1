@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+   in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+  
+body {
+  background-color: tomato;
+  font-family: system-ui;
+	margin-top: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  max-width: 60%;
+  background-color: #6F5B7F;
+  box-shadow: 0 5px;
+}
+/* 
+.card {
+  
+} */
+
+/* .card-img {
+  border-radius: 50%;
+} */
+
+button.start {
+  max-width: 50%;
+  text-align: center;
+  margin-top: 20px;
+}

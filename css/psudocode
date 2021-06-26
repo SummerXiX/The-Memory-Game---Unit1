@@ -1,0 +1,30 @@
+
+/* General Psudocode 
+ - Create an image folder
+ - Change images into 120px to 120px
+ - Drag images into the image folder
+ Image-converter: https://convert-my-image.com/imageconverter 
+ 
+HTML: 
+1. Create elements on the page layout
+  Create a grid
+2. Add the HTML for 
+  a. the "start button"  
+  b. "the Light/Dark Mode" button
+3. Add a container element for the 20 images to be appended to as children
+
+JS: 
+1. Add a cached element reference for the container element in the JS file
+2. Add cached element references for the buttons
+3. Add constants to make an array of images 
+3. Add event listeners to each buttons ("click")
+4. Add event listener to each click on image
+5. Create functions to :
+  a. 
+6. Creats a render function : 
+6. Create a handleClick function
+
+CSS:
+1. Reset CSS
+2. Style element
+3. Add @media query 
