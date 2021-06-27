@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
 }
-
 /* The Universal Selector */
 *, /* All elements*/
 *::before, /* All ::before pseudo-elements */
@@ -10,13 +9,12 @@ html {
      but can be over-ridden as needed */
   box-sizing: inherit;
 }
-
 /* resets font size to be 62.5% of the user preference - 
    in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
 }
-  
+
 body {
   background-color: tomato;
   font-family: system-ui;
@@ -27,22 +25,58 @@ body {
   align-items: center;
 }
 
-.board {
-  max-width: 60%;
-  background-color: #6F5B7F;
-  box-shadow: 0 5px;
-}
-/* 
-.card {
-  
-} */
+.gameboard {
+  width: 600px;
+  height: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  margin: auto;
+  perspective: 1000px;
+  }
 
-/* .card-img {
-  border-radius: 50%;
-} */
+.card {
+  width: 18%;
+  height: 23%;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card:active {
+  transform: scale(0.8);
+  transition: transform 0.5s;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+
+
+}
+
+.front-face,
+.back-face {
+  position: absolute;
+  border: 2px solid, green;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.back-face {
+  z-index: 1;
+}
+
 
 button.start {
   max-width: 50%;
   text-align: center;
   margin-top: 20px;
 }
+
