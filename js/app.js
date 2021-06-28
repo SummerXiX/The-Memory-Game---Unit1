@@ -12,9 +12,11 @@
 
 /*--------------- Variables (state) -------------------*/
 
+
 let firstCard, secondCard
 let hasFlipped = false
 let delay = false
+let win
       
 /*-------------- Cached Element References -----------------*/
 const startBtn = document.getElementById('start')
@@ -35,10 +37,6 @@ cards.forEach((card) => {
       return
     }
 
-    if (this === firstCard) {
-      return
-    }
-    
     this.classList.add('flip')
     // if the card has flipped, it means it's the player's first click => firstCard = this
     if (!hasFlipped){
@@ -56,7 +54,7 @@ cards.forEach((card) => {
       // if the two cards are the same, remove the click event listener
       // if the two cards are not the same, flip the card to the original state/ back face
       if (firstCard.dataset.image === secondCard.dataset.image){
-    
+        alert('YAY')
       firstCard.removeEventListener('click', clickToFlip)
       secondCard.removeEventListener('click', clickToFlip)
 
@@ -77,10 +75,51 @@ cards.forEach((card) => {
         [firstCard, secondCard] = [null, null]
       }
       }
-    
+     
+  
       (function shuffle() {
         cards.forEach(function(card) {
           let randomNum = Math.floor(Math.random()*20)
           card.style.order=randomNum
         })
       })()
+
+      // win function
+      
+      if (win) {
+        message.innerHTML = `Amazing! You win!`
+      } else {
+        message.innerHTML = `Try Again!`
+      }
+
+      // timer 
+      const totalMinutes = 3
+     
+      let countdownEl = document.getElementById('countdown')
+
+      let timeLeft = 180
+
+      let timer = setInterval(function(){
+        const minutes = Math.floor(timeLeft/60)
+        let seconds = timeLeft % 60
+        
+        seconds = seconds < 10 ? '0' + seconds : seconds
+        countdownEl.textContent = `0${minutes}:${seconds}`
+
+        timeLeft -=1
+
+        if (timeLeft < 0){
+          countdownEl.textContent = '00:00'
+          clearInterval(countDown)
+      }
+    }, 1000)
+
+      
+     
+        
+        
+        
+
+
+
+     
