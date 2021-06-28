@@ -19,7 +19,7 @@ let delay = false
 let win
       
 /*-------------- Cached Element References -----------------*/
-const startBtn = document.getElementById('start')
+const restartBtn = document.getElementById('restart', reset)
 const lightDarkBtn = document.getElementById('light-dark-button')
 const message = document.querySelector('#message')
 const cards = document.querySelectorAll('.card')
@@ -53,10 +53,12 @@ cards.forEach((card) => {
       // console.log(secondCard.dataset.image)
       // if the two cards are the same, remove the click event listener
       // if the two cards are not the same, flip the card to the original state/ back face
+      let countMatch = 0
       if (firstCard.dataset.image === secondCard.dataset.image){
-        alert('YAY')
-      firstCard.removeEventListener('click', clickToFlip)
-      secondCard.removeEventListener('click', clickToFlip)
+        countMatch ++
+      
+        firstCard.removeEventListener('click', clickToFlip)
+        secondCard.removeEventListener('click', clickToFlip)
 
       reset()
 
@@ -75,7 +77,6 @@ cards.forEach((card) => {
         [firstCard, secondCard] = [null, null]
       }
       }
-     
   
       (function shuffle() {
         cards.forEach(function(card) {
@@ -84,20 +85,12 @@ cards.forEach((card) => {
         })
       })()
 
-      // win function
-      
-      if (win) {
-        message.innerHTML = `Amazing! You win!`
-      } else {
-        message.innerHTML = `Try Again!`
-      }
-
       // timer 
-      const totalMinutes = 3
+      const totalMinutes = 2
      
       let countdownEl = document.getElementById('countdown')
 
-      let timeLeft = 180
+      let timeLeft = 120
 
       let timer = setInterval(function(){
         const minutes = Math.floor(timeLeft/60)
@@ -110,9 +103,17 @@ cards.forEach((card) => {
 
         if (timeLeft < 0){
           countdownEl.textContent = '00:00'
-          clearInterval(countDown)
+          clearInterval(countdown)
       }
     }, 1000)
+
+      // win function
+    if (countMatch = 10 && timeLeft > 0) {
+      win = true
+      message.innerHTML = "Amazing! You win!"
+    } else if (countMatch < 10 && timeLeft < 0){
+      message.innerHTML = "Try Again!"
+    }
 
       
      
