@@ -50,9 +50,7 @@ body {
 }
 
 .card.flip {
-  transform: rotateY(180deg);
-
-
+  transform: rotateY(180deg)
 }
 
 .front-face,
@@ -79,4 +77,3 @@ button.start {
   text-align: center;
   margin-top: 20px;
 }
-
