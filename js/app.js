@@ -11,15 +11,14 @@
 // }
 
 /*--------------- Variables (state) -------------------*/
-
-
 let firstCard, secondCard
 let hasFlipped = false
 let delay = false
 let win
+let countMatch = 0
       
 /*-------------- Cached Element References -----------------*/
-const restartBtn = document.getElementById('restart', reset)
+const restartBtn = document.getElementById('restart')
 const lightDarkBtn = document.getElementById('light-dark-button')
 const message = document.querySelector('#message')
 const cards = document.querySelectorAll('.card')
@@ -30,6 +29,11 @@ const cards = document.querySelectorAll('.card')
 cards.forEach((card) => {
   card.addEventListener('click', clickToFlip)
 })
+
+restartBtn.addEventListener('click', restart)
+
+lightDarkBtn.addEventListener("click", colorScheme.change)
+
 /*-------------------------------- Functions --------------------------------*/
   //2 Click to flip card: 
   function clickToFlip(){
@@ -53,7 +57,7 @@ cards.forEach((card) => {
       // console.log(secondCard.dataset.image)
       // if the two cards are the same, remove the click event listener
       // if the two cards are not the same, flip the card to the original state/ back face
-      let countMatch = 0
+      
       if (firstCard.dataset.image === secondCard.dataset.image){
         countMatch ++
       
@@ -78,12 +82,15 @@ cards.forEach((card) => {
       }
       }
   
-      (function shuffle() {
+      function restart() {
         cards.forEach(function(card) {
           let randomNum = Math.floor(Math.random()*20)
           card.style.order=randomNum
         })
-      })()
+        timeLeft = 120
+      }
+
+
 
       // timer 
       const totalMinutes = 2
@@ -102,19 +109,34 @@ cards.forEach((card) => {
         timeLeft -=1
 
         if (timeLeft < 0){
+          didYouWin()
           countdownEl.textContent = '00:00'
           clearInterval(countdown)
       }
     }, 1000)
 
       // win function
-    if (countMatch = 10 && timeLeft > 0) {
+    function didYouWin() {
+      if (countMatch === 10 && timeLeft > 0) {
       win = true
       message.innerHTML = "Amazing! You win!"
-    } else if (countMatch < 10 && timeLeft < 0){
+    } else if (countMatch < 10 && timeLeft <= 0){
       message.innerHTML = "Try Again!"
     }
+  }
 
+  // Dark mode Light Mode
+
+  function checkUserColorSchemePreference() {
+    if (
+      window.matchMedia("(prefers-color-scheme:dark)").matches &&
+      !colorScheme.dark
+    ) {
+      colorScheme.change()
+    }
+  }
+
+  checkUserColorSchemePreference()
       
      
         
