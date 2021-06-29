@@ -2,14 +2,6 @@
 /*
 /*----------- Constants --------------*/
 
-
-
-
-// const colorScheme = {
-//   dark: "",
-//   ...Clipboard.apply.
-// }
-
 /*--------------- Variables (state) -------------------*/
 let firstCard, secondCard
 let hasFlipped = false
@@ -19,7 +11,7 @@ let countMatch = 0
       
 /*-------------- Cached Element References -----------------*/
 const restartBtn = document.getElementById('restart')
-const lightDarkBtn = document.getElementById('light-dark-button')
+const lightDarkBtn = document.getElementById('darkLightBtn')
 const message = document.querySelector('#message')
 const cards = document.querySelectorAll('.card')
 
@@ -31,6 +23,11 @@ cards.forEach((card) => {
 })
 
 restartBtn.addEventListener('click', restart)
+
+lightDarkBtn.addEventListener('click', lightDarkFunction)
+
+
+
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -82,16 +79,19 @@ restartBtn.addEventListener('click', restart)
       }
   
       function restart() {
+       
         cards.forEach(function(card) {
+          card.classList.remove('flip')
+          countMatch = 0
+          card.addEventListener('click', clickToFlip)
           let randomNum = Math.floor(Math.random()*20)
           card.style.order=randomNum
         })
         timeLeft = 120
+
       }
 
-
-
-      // timer 
+      // timer & win conditions
       const totalMinutes = 2
      
       let countdownEl = document.getElementById('countdown')
@@ -124,9 +124,13 @@ restartBtn.addEventListener('click', restart)
     }
   }
 
-  // Dark mode Light Mode
+  // dark/light mode
 
-
+  function lightDarkFunction() {
+    let element = document.body;
+    element.classList.toggle("darkLightBtn");
+  }
+  
         
         
 
