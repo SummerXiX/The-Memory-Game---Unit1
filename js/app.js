@@ -32,7 +32,6 @@ cards.forEach((card) => {
 
 restartBtn.addEventListener('click', restart)
 
-lightDarkBtn.addEventListener("click", colorScheme.change)
 
 /*-------------------------------- Functions --------------------------------*/
   //2 Click to flip card: 
@@ -127,19 +126,7 @@ lightDarkBtn.addEventListener("click", colorScheme.change)
 
   // Dark mode Light Mode
 
-  function checkUserColorSchemePreference() {
-    if (
-      window.matchMedia("(prefers-color-scheme:dark)").matches &&
-      !colorScheme.dark
-    ) {
-      colorScheme.change()
-    }
-  }
 
-  checkUserColorSchemePreference()
-      
-     
-        
         
         
 
