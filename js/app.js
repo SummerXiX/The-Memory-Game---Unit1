@@ -27,9 +27,6 @@ restartBtn.addEventListener('click', restart)
 lightDarkBtn.addEventListener('click', lightDarkFunction)
 
 
-
-
-
 /*-------------------------------- Functions --------------------------------*/
   //2 Click to flip card: 
   function clickToFlip(){

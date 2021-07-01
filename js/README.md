@@ -1,5 +1,5 @@
 # unit1project
-<!--  -->
+
 Game's Title: Memory Game
 
 Decription: It's a memory game where the player tries to find matching images. If he/she finds all the pairs within 2 minutes, it's a win. Otherwise, he/she loses. 
@@ -13,10 +13,7 @@ Technologies Used: JS, HTML, CSS
 
 Next Steps: 
 1. Audio and sound effects: a. background music. 
-2. clik sound effect?
-3. win effect?
-4. CSS. Formatting, 
-
+2. CSS Formatting 
 
 
 
