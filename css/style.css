@@ -34,11 +34,6 @@ body {
   align-items: center;
 }
 
-.darkLightBtn {
-  background-color: black;
-  color: white;
-}
-
 .gameboard {
   width: 600px;
   height: 480px;
@@ -49,12 +44,7 @@ body {
   background-color: grey;
   margin: auto;
   perspective: 1000px;
-  }
-
-  #darkLightBtn{
-    background-color: black;
-    color: white;
-  }
+}
 
 .card {
   
@@ -63,12 +53,12 @@ body {
   position: relative;
   transform: scale(1);
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 0.8s;
 }
 
 .card:active {
   transform: scale(0.8);
-  transition: transform 0.5s;
+  transition: transform 0.3s;
 }
 
 .card.flip {
@@ -99,15 +89,30 @@ body {
   margin-bottom: 50px;
 }
 
-
 #countdown {
-  background-color: white;
-  position: absolute;
-  display: flex;
-  align-items:center;
-  justify-content: middle;
-  font-size: 30px;
+  background-color: black;
+  font-size: 20px;
   margin: 0;
-  height: 40px;
-  width: 100px;
+  color: gray;
+  
 }
+
+#darkLightBtn {
+  background-color: black;
+  color: white;
+  
+}
+
+.uni-container {
+  display:flex;
+  align-items: center;
+  font-family: Arial;
+  font-size: 20px;
+  justify-content: space-evenly;
+  width: 1500px;
+  
+}
+
+
+
+
