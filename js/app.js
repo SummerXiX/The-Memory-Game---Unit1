@@ -27,7 +27,7 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
 
 /*-------------------------------- Functions --------------------------------*/
 
-  function clickToFlip(){
+function clickToFlip(){
     if (delay) {
       return
     }
@@ -49,7 +49,7 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
       // if the two cards are the same, remove the click event listener
       // if the two cards are not the same, flip the card to the original state/ back face
       
-      if (firstCard.dataset.image === secondCard.dataset.image){
+    if (firstCard.dataset.image === secondCard.dataset.image){
         countMatch ++
       
         firstCard.removeEventListener('click', clickToFlip)
@@ -67,13 +67,13 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
       }, 1500)
       }
 
-      function reset() {
+    function reset() {
         [hasFlipped, delay] = [false, false]
         [firstCard, secondCard] = [null, null]
       }
       }
   
-      function restart() {
+    function restart() {
        
         cards.forEach(function(card) {
           card.classList.remove('flip')
@@ -86,17 +86,16 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
 
       }
 
-      // timer & win conditions
-      const totalMinutes = 2
+    // timer & win conditions
+    const totalMinutes = 2
      
-      let countdownEl = document.getElementById('countdown')
+    let countdownEl = document.getElementById('countdown')
 
-      let timeLeft = 120
+    let timeLeft = 120
 
-      let timer = setInterval(function(){
-        const minutes = Math.floor(timeLeft/60)
-        let seconds = timeLeft % 60
-        
+    let timer = setInterval(function(){
+      const minutes = Math.floor(timeLeft/60)
+      let seconds = timeLeft % 60
         seconds = seconds < 10 ? '0' + seconds : seconds
         countdownEl.textContent = `0${minutes}:${seconds}`
 
@@ -114,10 +113,10 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
       if (countMatch === 10 && timeLeft > 0) {
       win = true
       message.innerHTML = "Amazing! You win!"
-    } else if (countMatch < 10 && timeLeft <= 0){
+      } else if (countMatch < 10 && timeLeft <= 0){
       message.innerHTML = "Try Again!"
+      }
     }
-  }
 
   // dark/light mode
 
@@ -125,7 +124,6 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
     let element = document.body;
     element.classList.toggle("darkLightBtn");
   }
-  
         
         
 

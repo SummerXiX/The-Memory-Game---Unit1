@@ -59,6 +59,12 @@
   - Should clip over the cards
   - Format the buttons and headers
 
+-------------------------------------------------------
+# Future Improvements:
+  - make it prettier
+  - Add audio
+
+
 
 
 
