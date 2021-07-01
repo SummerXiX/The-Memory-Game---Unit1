@@ -1,6 +1,4 @@
 
-/*
-/*----------- Constants --------------*/
 
 /*--------------- Variables (state) -------------------*/
 let firstCard, secondCard
@@ -28,7 +26,7 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
 
 
 /*-------------------------------- Functions --------------------------------*/
-  //2 Click to flip card: 
+
   function clickToFlip(){
     if (delay) {
       return
