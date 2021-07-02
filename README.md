@@ -1,6 +1,6 @@
 # Memory Game
 -------------------------------------------------------
-# [Click to play the game.](summerxing-unit1.netlify.app)
+# [Click to play the game](https://summerxing-unit1.netlify.app/)
 -------------------------------------------------------
 # Motivation: 
 - For my first project, I want to create something where I can practice what we have learned in Unit 1 so far and be comfortable with all the material. 
@@ -18,8 +18,11 @@
 
 -------------------------------------------------------
  # Dark-light Mode:
- ![light-mode](../screenshots/dark-mode.png)
- ![dark-mode](../screenshots/light-mode.png)
+ ![light-mode](./screenshots/dark-mode.png)
+ ![dark-mode](./screenshots/light-mode.png)
+ ![win](
+   
+ )
 
 -------------------------------------------------------
 # Psudo-code

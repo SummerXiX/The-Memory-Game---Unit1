@@ -107,7 +107,7 @@ function clickToFlip(){
 
       // win function
   function didYouWin() {
-    if (countMatch === 10 && timeLeft > 0) {
+    if (countMatch = 10 && timeLeft > 0) {
     win = true
     message.innerHTML = "Amazing! You win!"
     } else if (countMatch < 10 && timeLeft <= 0){
