@@ -1,6 +1,6 @@
 # Memory Game
 -------------------------------------------------------
-# Click [here](summerxing-unit1.netlify.app) to play the game.
+# [Click to play the game.](summerxing-unit1.netlify.app)
 -------------------------------------------------------
 # Motivation: 
 - For my first project, I want to create something where I can practice what we have learned in Unit 1 so far and be comfortable with all the material. 
