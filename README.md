@@ -10,6 +10,7 @@
 - There are 2 x 10 = 20 cards in the game.
 - If the players clicks on the same images (finds the pair)consecutively , the images stay face-up. 
 - If he/she finds all the pairs within 2 minutes, it's a win. Otherwise, he/she loses. 
+- * Need to click on the Restart button to play the game
 
 -------------------------------------------------------
 
@@ -21,7 +22,7 @@
  ![light-mode](./screenshots/dark-mode.png)
  ![dark-mode](./screenshots/light-mode.png)
  ![win](
-   
+
  )
 
 -------------------------------------------------------
