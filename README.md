@@ -21,9 +21,9 @@
  # Dark-light Mode:
  ![light-mode](./screenshots/dark-mode.png)
  ![dark-mode](./screenshots/light-mode.png)
- ![win](
+ 
 
- )
+ 
 
 -------------------------------------------------------
 # Psudo-code
