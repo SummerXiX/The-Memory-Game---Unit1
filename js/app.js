@@ -2,7 +2,7 @@
 let firstCard, secondCard
 let hasFlipped = false
 let delay = false
-let win
+let win 
 let countMatch = 0
 
 /*-------------- Cached Element References -----------------*/
@@ -20,9 +20,6 @@ cards.forEach((card) => {
 restartBtn.addEventListener('click', restart)
 
 lightDarkBtn.addEventListener('click', lightDarkFunction)
-
-
-
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -49,10 +46,12 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
       
       if (firstCard.dataset.image === secondCard.dataset.image){
         countMatch ++
+        console.log(countMatch)
       
         firstCard.removeEventListener('click', clickToFlip)
         secondCard.removeEventListener('click', clickToFlip)
       reset()
+      didYouWin()
       } else {
         delay = true
         setTimeout(() => {

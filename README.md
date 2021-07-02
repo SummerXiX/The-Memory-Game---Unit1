@@ -21,9 +21,6 @@
  # Dark-light Mode:
  ![light-mode](./screenshots/dark-mode.png)
  ![dark-mode](./screenshots/light-mode.png)
- 
-
- 
 
 -------------------------------------------------------
 # Psudo-code
@@ -34,7 +31,7 @@
   - Create a gameboard with 20 images and assign back-side/front-side to them
   - Create a restart button
 
-- JS
+- JS:
   - Define variables/state
     - firstCard = the first card that a player clicks on
     - secondCard = the second card that a player clicks on
