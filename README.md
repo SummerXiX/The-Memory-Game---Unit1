@@ -58,7 +58,7 @@
     - Create a function for the light/dark mode
 
 - CSS
-  - Should clip over the cards
+  - Should flip over the cards
   - Format the buttons and headers
 
 -------------------------------------------------------

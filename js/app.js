@@ -34,7 +34,7 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
       hasFlipped = true
       firstCard = this
       return
-    // if the card doesnt flip, it means the player is clicking on the first cardit's the second card
+    // if the card doesnt flip, it means it's the second card
     } else {
       secondCard = this
     }
@@ -80,7 +80,6 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
 
       // timer & win conditions
      
-
       let countdownEl = document.getElementById('countdown')
       let timeLeft = 120
       let timer = setInterval(function(){
