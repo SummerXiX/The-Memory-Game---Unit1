@@ -39,8 +39,6 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
       secondCard = this
     }
       // Do two cards match
-      // console.log(firstCard.dataset.image)
-      // console.log(secondCard.dataset.image)
       // if the two cards are the same, remove the click event listener
       // if the two cards are not the same, flip the card to the original state/ back face
       
@@ -67,7 +65,6 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
       }
 
       function restart() {
-
         cards.forEach(function(card) {
           card.classList.remove('flip')
           countMatch = 0
@@ -78,7 +75,7 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
         timeLeft = 120
       }
 
-      // timer & win conditions
+      // timer
      
       let countdownEl = document.getElementById('countdown')
       let timeLeft = 120
@@ -97,6 +94,7 @@ lightDarkBtn.addEventListener('click', lightDarkFunction)
     }, 1000)
 
       // win function
+      
     function didYouWin() {
       if (countMatch === 10 && timeLeft > 0) {
       win = true
